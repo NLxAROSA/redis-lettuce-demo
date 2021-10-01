@@ -30,4 +30,16 @@ Features:
 
 ## Troubleshooting
 
-1. When using this repo as this basis for your app, take a look at the pom.xml
+1. When using this repo as this basis for your app, take a look at the pom.xml, particularly the section below:
+
+```xml
+<plugin>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.8.0</version>
+    <configuration>
+    <parameters>true</parameters>
+    </configuration>
+</plugin>
+```
+
+Setting `parameters` to `true` is required for automatic mapping of method parameters to parameter placeholders in the `@Command` annotations.
